@@ -157,7 +157,9 @@ export default {
     }
 }
 
-function _fetchMovie(payload){
+async function _fetchMovie(payload){
+    
+    /*
     const {title, type, number, year, page, id} = payload;
 
     console.log(payload);
@@ -190,5 +192,10 @@ function _fetchMovie(payload){
         });
 
     });
+
+    */
+
+    return await axios.post('/.netlify/functions/movie', payload);
+
 }
 
