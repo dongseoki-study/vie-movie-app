@@ -1,0 +1,162 @@
+// import {double} from './example';
+
+// describe('그룹1', () => {
+
+//     beforeAll(() => {
+        
+//     });
+
+//     afterAll(() => {
+
+//     });
+
+//     beforeEach(() => {
+
+//     });
+
+//     afterAll(() => {
+
+//     });
+
+//     test('첫 테스트', () => {
+//         expect(123).toBe(123);
+//     });
+    
+//     test('인수가 숫자 데이터 입니다', () => {
+//         expect(double(3)).toBe(6);
+//         expect(double(10)).toBe(20);
+    
+//     });
+    
+//     test('인수가 없습니다', () => {
+//         expect(double()).toBe(0);
+//     });
+    
+// });
+
+
+//import {asyncFn} from './example';
+
+/*
+describe('그룹1', () => {
+    // test('done', () => {
+    //     asyncFn().then((res) => {
+    //         expect(res).toBe('Done?'); // 정상 테스트가 되지 않는다.
+    //     })
+    // });
+
+    // 비동기 처리 방안
+
+    // done 사용
+    // test('done', (done) => {
+    //     asyncFn().then((res) => {
+    //         expect(res).toBe('Done!');
+    //         done();
+    //     })
+    // });
+
+    // return 사용
+    // test('then', () => {
+    //     return asyncFn().then((res) => {
+    //         expect(res).toBe('Done?');
+    //     });
+    // });
+
+    //resolves 사용, 꼭 return 필요
+    // test('resolves', () => {
+    //    return expect(asyncFn()).resolves.toBe('Done?');
+    // });
+
+    //test('resolves', () => expect(asyncFn()).resolves.toBe('Done!'));
+
+    // async/await 사용
+    // test('async/await', async () => {
+    //     const res = await asyncFn();
+    //     expect(res).toBe('Done!');
+    // });
+
+    // 비동기 테스트시 최대 5초대기가 Max (기본값)
+
+    // test('async/await', async () => {
+    //     const res = await asyncFn();
+    //     expect(res).toBe('Done!');
+    // }, 7000); // 대기 시간 지정
+
+
+});
+
+*/
+
+    // 모의 함수
+
+// import * as example from './example';
+
+// describe('그룹1', () => {
+
+//     test('async/await', async () => {
+
+//         jest.spyOn(example, 'asyncFn').mockResolvedValue('Done!');
+
+//         const res = await example.asyncFn();
+//         expect(res).toBe('Done!');
+//     }, 7000); // 대기 시간 지정
+
+// });
+
+// import {fetchMoveTitle} from './example';
+
+// describe('그룹1', () => {
+
+//     test('async/await', async () => {
+
+//         const title = await fetchMoveTitle();
+//         expect(title).toBe('Frozen ii');
+
+//     });
+// });
+
+
+// import {fetchMoveTitle} from './example';
+// import axios from "axios";
+
+// describe('그룹1', () => {
+
+//     test('async/await', async () => {
+
+//         axios.get = jest.fn(() => {
+//             return new Promise(resolve => {
+//                 resolve({
+//                     data: {
+//                         Title: 'Frozen II'
+//                     }
+//                 })
+//             })
+//         });
+
+//         const title = await fetchMoveTitle();
+//         expect(title).toBe('Frozen ii');
+
+//     });
+// });
+
+
+// vue test
+// import {mount} from '@vue/test-utils';
+// import Example from './Example.vue';
+
+// test('메시지를 변경합니다.', async () => {
+//     const wrapper = mount(Example);
+//     expect(wrapper.vm.msg).toBe('Hello Vue test utils!');
+
+//     //wrapper.vm.msg = 'Hello world!';// 화면은 변경되지 않음
+
+//     await wrapper.setData({
+//         msg: 'Hello world!'
+//     })
+
+//     expect(wrapper.vm.msg).toBe('Hello world!');
+
+//     expect(wrapper.find('div').text()).toBe('Hello world!'); 
+
+// })
+

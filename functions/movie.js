@@ -21,7 +21,7 @@ exports.handler = async function (event, context) {
 
     try{
         const {data} = await axios.get(API_URL);
-        //console.log(data);
+        console.log(data);
         if(data.Error){
             return {
                 statusCode: 400,
